@@ -1,10 +1,18 @@
 import React from "react";
+import ProductImage from "./ProductImage";
+import PriceDetail from "./PriceDetail";
 
 const Content = () => {
   return (
-    <div>
-      <img src="/images/1.jpg"/>
-      <h6>Meraki MR33 Access Point 802.11ac Wave 2 2x2 MR33-HW</h6>
+    <div className="container">
+      <div className="row" style={{ marginTop: "50px" }}>
+        <div className="col-lg-6">
+          <ProductImage/>
+        </div>
+        <div className="col-lg-6">
+          <PriceDetail/>
+        </div>
+      </div>
     </div>
   );
 }
