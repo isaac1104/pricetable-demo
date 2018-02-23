@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
-import { connect } from "react-redux";
-// import FormField from "./FormField";
 
 class PackageOption extends Component {
 
   formSubmit = value => {
-    console.log(value);
+    alert(`Your total is: $${value.price}`);
   }
 
   render() {
@@ -15,7 +13,7 @@ class PackageOption extends Component {
     return (
       <form onSubmit={handleSubmit(this.formSubmit)}>
         <div>
-          <label>Meraki Access Point License:</label>
+          <label className="text-muted">Meraki Access Point License:</label>
           <div>
             <Field name="price" component="select">
               <option value="300.00">None</option>
@@ -25,10 +23,12 @@ class PackageOption extends Component {
             </Field>
           </div>
         </div>
-        <button className="btn btn-primary btn-md">ADD TO CART</button>
+        <div style={{ marginTop: "20px" }}>
+          <button className="btn btn-primary btn-md">ADD TO CART</button>
+        </div>
       </form>
     );
   }
 }
 
-export default reduxForm({ form: "price", initialValues: { price: "300.00" } })(connect(null, {} )(PackageOption));
+export default reduxForm({ form: "price" })(PackageOption);

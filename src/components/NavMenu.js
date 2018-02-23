@@ -2,7 +2,7 @@ import React from "react";
 
 const NavMenu = ({ item }) => {
   return (
-    <a href="#" className="nav-link">
+    <a href={`/${item}`} className="nav-link">
       {item.toUpperCase()}
     </a>
   );
