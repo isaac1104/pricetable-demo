@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PackageOption from "./PackageOption";
-import { Field, reduxForm } from "redux-form";
+import { reduxForm } from "redux-form";
 import { connect } from "react-redux";
 
 class PriceDetail extends Component {
@@ -13,9 +13,9 @@ class PriceDetail extends Component {
 
     const priceDiff = () => {
       if (price < 600) {
-        return <h3 className="text-warning">You save: ${600 - price}</h3>
+        return <h3 className="text-warning">You save: ${600 - price}.00</h3>
       } else {
-        return <h3 className="text-warning"><del>You save: $0</del></h3>
+        return <h3 className="text-warning"><del>You save: $0.00</del></h3>
       }
     }
 
@@ -24,7 +24,7 @@ class PriceDetail extends Component {
         <h2 className="display-4">Meraki MR33 Access Point 802.11ac Wave 2 2x2 MR33-HW</h2>
         <div>
           <h3 className="text-success">Our Price: ${price}</h3>
-          <h4 className="text-danger">List Price: <del>$600</del></h4>
+          <h4 className="text-danger">List Price: <del>$600.00</del></h4>
           {priceDiff()}
         </div>
         <div className="text-info">
