@@ -22,15 +22,15 @@ class PriceDetail extends Component {
     return (
       <div>
         <h2 className="display-4">Meraki MR33 Access Point 802.11ac Wave 2 2x2 MR33-HW</h2>
-        <div>
-          <h3 className="text-success">Our Price: ${price}</h3>
-          <h4 className="text-danger">List Price: <del>$600.00</del></h4>
-          {priceDiff()}
-        </div>
         <div className="text-info">
           <h4>SKU: MR33-HW</h4>
           <h4>Condition: New</h4>
           <h4>Availability: In Stock</h4>
+        </div>
+        <div>
+          <h3 className="text-success">Our Price: ${price}</h3>
+          <h4 className="text-danger">List Price: <del>$600.00</del></h4>
+          {priceDiff()}
         </div>
         <div>
           <PackageOption/>
