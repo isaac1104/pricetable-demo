@@ -11,9 +11,11 @@ class PriceDetail extends Component {
 
     const { price: { values : { price } } } = this.props.form;
 
+    const listPrice = 600;
+
     const priceDiff = () => {
-      if (price < 600) {
-        return <h3 className="text-warning">You save: ${600 - price}.00</h3>
+      if (price < listPrice) {
+        return <h3 className="text-warning">You save: ${listPrice - price}.00</h3>
       } else {
         return <h3 className="text-warning"><del>You save: $0.00</del></h3>
       }
@@ -29,7 +31,7 @@ class PriceDetail extends Component {
         </div>
         <div>
           <h3 className="text-success">Our Price: ${price}</h3>
-          <h4 className="text-danger">List Price: <del>$600.00</del></h4>
+          <h4 className="text-danger">List Price: <del>${listPrice}.00</del></h4>
           {priceDiff()}
         </div>
         <div>
