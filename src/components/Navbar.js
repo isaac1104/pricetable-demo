@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
 
 class Navbar extends Component {
 
   renderNavMenu = () => {
-    const items = ["home", "about", "products", "contact"];
+    const items = ["home" ,"mr33", "ar122"];
     return items.map(item => {
       return (
         <li className="nav-item" key={item}>
@@ -18,7 +19,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand" href="/">Our Website</a>
+          <Link to="/" className="navbar-brand">Our Website</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

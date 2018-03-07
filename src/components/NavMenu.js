@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavMenu = ({ item }) => {
   return (
-    <a href={`/${item}`} className="nav-link">
+    <Link to={`/${item}`} className="nav-link">
       {item.toUpperCase()}
-    </a>
+    </Link>
   );
 }
 
