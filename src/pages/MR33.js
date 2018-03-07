@@ -17,12 +17,10 @@ const MR33 = () => {
           <ProductDetail
             name="Meraki MR33 Access Point 802.11ac Wave 2 2x2 MR33-HW"
             sku="MR33-HW"
-            ourPrice="433.00"
-            listPrice="649.00"
           />
           <FormField
             type="radio"
-            label="None"
+            label="Cisco Meraki MR33 with no bundles"
             ourPrice={433.00}
             listPrice={649.00}
           />

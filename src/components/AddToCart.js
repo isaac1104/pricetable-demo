@@ -5,6 +5,7 @@ class AddToCart extends Component {
   render() {
     return (
       <button
+        type="submit"
         className="btn btn-outline-success"
         onClick={() => console.log(this.props.ourPrice, this.props.listPrice)}
       >

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class FormField extends Component {
   render() {
-    const { type, ourPrice, listPrice, label } = this.props;
+    const { type, ourPrice, listPrice, label, selected } = this.props;
     return (
       <div>
         <input
@@ -12,6 +12,7 @@ class FormField extends Component {
           name="option"
           value={ourPrice}
           onClick={() => this.props.changePrice(ourPrice, listPrice)}
+          selected={selected}
         />
         <label>{label}</label>
       </div>
