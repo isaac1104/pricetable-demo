@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 class FormField extends Component {
 
   componentWillUnmount() {
-    console.log("unmounted");
+    this.props.resetPrice();
   }
 
   render() {

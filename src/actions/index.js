@@ -1,4 +1,4 @@
-import { CHANGE_PRICE } from "./types";
+import { CHANGE_PRICE, RESET_PRICE } from "./types";
 
 export const changePrice = (ourPrice, listPrice) => {
   return {
@@ -6,4 +6,12 @@ export const changePrice = (ourPrice, listPrice) => {
     ourPrice,
     listPrice
   };
+}
+
+export const resetPrice = () => {
+  return {
+    type: RESET_PRICE,
+    ourPrice: "",
+    listPrice: ""
+  }
 }
