@@ -5,7 +5,7 @@ import NavMenu from "./NavMenu";
 class Navbar extends Component {
 
   renderNavMenu = () => {
-    const items = ["home" ,"mr33", "ar122"];
+    const items = ["home" ,"mr33", "ap122"];
     return items.map(item => {
       return (
         <li className="nav-item" key={item}>

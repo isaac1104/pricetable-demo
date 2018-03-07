@@ -3,16 +3,26 @@ import * as actions from "../actions";
 import { connect } from "react-redux";
 
 class FormField extends Component {
+
+  componentWillUnmount() {
+    console.log("unmounted");
+  }
+
   render() {
-    const { type, ourPrice, listPrice, label, selected } = this.props;
+
+    const style = {
+      marginRight: "15px"
+    }
+
+    const { type, ourPrice, listPrice, label } = this.props;
     return (
       <div>
         <input
+          style={style}
           type={type}
           name="option"
           value={ourPrice}
           onClick={() => this.props.changePrice(ourPrice, listPrice)}
-          selected={selected}
         />
         <label>{label}</label>
       </div>
