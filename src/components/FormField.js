@@ -1,16 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
+import * as actions from "../actions";
+import { connect } from "react-redux";
 
-const FormField = field => {
-  return (
-    <div>
-      <label>{field.label}</label>
-      <input
-        className="form-control"
-        type={field.type}
-        name="option"
-      />
-    </div>
-  );
+class FormField extends Component {
+  render() {
+    const { type, ourPrice, label } = this.props;
+    return (
+      <div>
+        <input
+          type={type}
+          name="option"
+          value={ourPrice}
+          onClick={() => this.props.changePrice(ourPrice)}
+        />
+        <label>{label}</label>
+      </div>
+    );
+  }
 }
 
-export default FormField;
+function mapStateToProps({ price }) {
+  return {
+    price
+  };
+}
+
+export default connect(mapStateToProps, actions)(FormField);
