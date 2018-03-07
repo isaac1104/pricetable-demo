@@ -9,15 +9,15 @@ class ProductDetail extends Component {
       if (!ourPrice) {
         return (
           <div>
-            <h3 className="text-success">Want to check out our great deals?</h3>
-            <h4 className="text-danger">Please select on of the options to see prices</h4>
+            <h3 className="text-success">Please select one of the options to see our great deal!</h3>
           </div>
         );
       } else {
         return (
-          <div>
-            <h3 className="text-success">Our Price: ${ourPrice}.00 </h3>
+          <div className="d-flex">
             <h4 className="text-danger">List Price: <del>${listPrice}.00</del></h4>
+            <h4 className="text-success">Our Price: ${ourPrice}.00 </h4>
+            <h4 className="text-muted">You Save: {Math.floor(((listPrice - ourPrice) / listPrice) * 100)}%</h4>
           </div>
         );
       }

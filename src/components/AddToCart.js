@@ -7,7 +7,7 @@ class AddToCart extends Component {
       <button
         type="submit"
         className="btn btn-outline-success"
-        onClick={() => console.log(this.props.ourPrice, this.props.listPrice)}
+        onClick={() => alert(`List Price - $${this.props.listPrice} Our Price - $${this.props.ourPrice}`)}
       >
         ADD TO CART
       </button>

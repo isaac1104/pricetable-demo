@@ -15,7 +15,7 @@ const AP122 = () => {
         </div>
         <div className="col-lg-6">
           <ProductDetail
-            name="Aerohive 122 Series"
+            name="Aerohive 122 Series 2x2 802.11ac Dual Radio Access Point"
             sku="AH-AP-122-AC-FCC"
           />
           <FormField
