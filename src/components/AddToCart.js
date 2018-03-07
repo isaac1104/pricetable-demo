@@ -6,7 +6,7 @@ class AddToCart extends Component {
     return (
       <button
         className="btn btn-outline-success"
-        onClick={() => console.log(this.props.price)}
+        onClick={() => console.log(this.props.ourPrice, this.props.listPrice)}
       >
         ADD TO CART
       </button>
@@ -16,7 +16,8 @@ class AddToCart extends Component {
 
 function mapStateToProps({ price }) {
   return {
-    price: price.price
+    ourPrice: price.ourPrice,
+    listPrice: price.listPrice
   };
 }
 

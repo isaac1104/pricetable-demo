@@ -11,7 +11,7 @@ function changePriceReducer(state = initialState, action) {
       return {
         ...state,
         ourPrice: action.ourPrice,
-        listPrice: action.ourPrice
+        listPrice: action.listPrice
       };
     default:
       return state;
