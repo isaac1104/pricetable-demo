@@ -15,8 +15,8 @@ class ProductDetail extends Component {
       } else {
         return (
           <div className="d-flex">
-            <h4 className="text-danger">List Price: <del>${listPrice}.00</del></h4>
-            <h4 className="text-success">Our Price: ${ourPrice}.00 </h4>
+            <h4 className="text-danger">List Price: <del>${listPrice.toLocaleString()}.00</del></h4>
+            <h4 className="text-success">Our Price: ${ourPrice.toLocaleString()}.00 </h4>
             <h4 className="text-muted">You Save: {Math.floor(((listPrice - ourPrice) / listPrice) * 100)}%</h4>
           </div>
         );
