@@ -3,11 +3,6 @@ import * as actions from "../actions";
 import { connect } from "react-redux";
 
 class FormField extends Component {
-
-  componentWillUnmount() {
-    this.props.resetPrice();
-  }
-
   render() {
 
     const style = {

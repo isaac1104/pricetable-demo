@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import * as actions from "../actions";
 import { connect } from "react-redux";
 
 class ProductDetail extends Component {
+
+  componentWillUnmount() {
+    this.props.resetPrice();
+  }
+
   render() {
     const { name, sku, ourPrice, listPrice } = this.props;
 
@@ -44,4 +50,4 @@ function mapStateToProps({ price }) {
   }
 }
 
-export default connect(mapStateToProps, null)(ProductDetail);
+export default connect(mapStateToProps, actions)(ProductDetail);
